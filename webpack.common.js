@@ -40,9 +40,9 @@ function getEntry (ext) {
 module.exports = {
   entry: getEntry('js'),
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, 'publics'),
     filename: 'js/[name].js',
-    publicPath: '/public/'
+    publicPath: '/publics/'
   },
   module: {
     rules: [
@@ -63,7 +63,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: 'image/[name].[ext]',
-              publicPath: '/public/'
+              publicPath: '/publics/'
             }
           }
         ]
@@ -88,9 +88,9 @@ module.exports = {
     }),
     new CleanWebpackPlugin([
       path.resolve(__dirname, 'views'),
-      path.resolve(__dirname, 'public/js/'),
-      path.resolve(__dirname, 'public/css/'),
-      path.resolve(__dirname, 'public/image/')
+      path.resolve(__dirname, 'publics/js/'),
+      path.resolve(__dirname, 'publics/css/'),
+      path.resolve(__dirname, 'publics/image/')
     ])
   ]
 }

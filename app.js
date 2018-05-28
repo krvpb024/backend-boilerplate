@@ -8,9 +8,8 @@ const expressValidator = require('express-validator')
 const passport = require('passport')
 const methodOverride = require('method-override')
 
-const admin = require('./routes/admin')
-const front = require('./routes/front')
-const user = require('./routes/user')
+// const route = require('./routes/')
+
 require('dotenv').config()
 
 // DB
@@ -67,9 +66,7 @@ app.use((req, res, next) => {
 
 // Route
 
-app.use('/', front)
-app.use('/user', user)
-app.use('/system_admin', admin)
+// app.use('/', route)
 
 // ErrorHandle
 
