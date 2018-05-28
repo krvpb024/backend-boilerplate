@@ -8,7 +8,7 @@ const expressValidator = require('express-validator')
 const passport = require('passport')
 const methodOverride = require('method-override')
 
-// const route = require('./routes/')
+const route = require('./routes/index')
 
 require('dotenv').config()
 
@@ -66,7 +66,7 @@ app.use((req, res, next) => {
 
 // Route
 
-// app.use('/', route)
+app.use('/', route)
 
 // ErrorHandle
 
