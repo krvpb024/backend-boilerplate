@@ -6,6 +6,5 @@ const bookshelf = require('bookshelf')(knex)
 
 module.exports = {
   knex,
-  bookshelf,
-  knexConfig
+  bookshelf
 }
